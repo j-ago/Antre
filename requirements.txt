@@ -1,5 +1,5 @@
 streamlit==1.33.0
-pandas
+pandas==3.1.0
 numpy
 openai==0.28.0
 openpyxl==3.0.10
