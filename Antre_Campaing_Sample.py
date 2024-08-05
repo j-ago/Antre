@@ -3,7 +3,8 @@ import openai
 import pandas as pd
 
 # OpenAI APIキーを設定
-openai.api_key = 'YOUR_OPENAI_API_KEY'
+if st.checkbox("Enter your OpenAI API key"):
+    openai.api_key = st.text_input("OpenAI API Key", type="password")
 
 # エクセルファイルの読み込み
 def load_excel(file):
@@ -96,6 +97,3 @@ def add_custom_css():
 # カスタムCSSを適用
 add_custom_css()
 
-# OpenAI APIキーを設定
-if st.checkbox("Enter your OpenAI API key"):
-    openai.api_key = st.text_input("OpenAI API Key", type="password")
